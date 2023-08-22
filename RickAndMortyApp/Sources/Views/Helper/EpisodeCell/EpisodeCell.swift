@@ -28,7 +28,7 @@ struct EpisodeCell: View {
             }
             .padding()
             .background(Color(UIColor.cardBackground!))
-            .cornerRadius(16)
+            .cornerRadius(CustomCornerRadius.corner16.rawValue)
             
     }
     
@@ -36,15 +36,15 @@ struct EpisodeCell: View {
     func createCell(title: String, episode: String, airDate: String) -> some View {
         VStack(alignment: .leading, spacing: 16) {
             Text(title)
-                .font(.system(size: 17))
+                .font(Font(UIFont.system17normal))
                 .foregroundColor(.white)
             HStack {
                 Text(episode)
-                    .font(.system(size: 13))
+                    .font(Font(UIFont.system13normal))
                     .foregroundColor(Color(UIColor.greenTextColor!))
                 Spacer()
                 Text(airDate)
-                    .font(.system(size: 12))
+                    .font(Font(UIFont.system12normal))
             }
         }
     }

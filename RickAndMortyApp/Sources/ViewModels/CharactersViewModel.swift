@@ -12,7 +12,6 @@ class CharactersViewModel {
     
     init() {
         getChar()
-       
     }
     
     

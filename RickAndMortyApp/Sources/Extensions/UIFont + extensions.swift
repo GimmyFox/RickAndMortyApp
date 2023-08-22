@@ -13,4 +13,7 @@ extension UIFont {
     static let system24normal = UIFont.systemFont(ofSize: 24)
     static let system22normal = UIFont.systemFont(ofSize: 22)
     static let system18normal = UIFont.systemFont(ofSize: 18)
+    static let system17normal = UIFont.systemFont(ofSize: 17)
+    static let system13normal = UIFont.systemFont(ofSize: 13)
+    static let system12normal = UIFont.systemFont(ofSize: 12)
 }
