@@ -13,10 +13,6 @@ class CharacterDescriptionViewModel: ObservableObject {
     @Published var origin: OriginModel?
     init(model: CharacterInfo) {
         self.model = model
-        if model.origin.url.isEmpty {
-            print("emprt")
-        }
-        print(model.origin.url)
         getCharacterOrigin()
     }
     

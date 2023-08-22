@@ -105,7 +105,6 @@
 				97F2D4A12A94CAF9008E725E /* Resources */,
 				97F2D4A02A94CAEB008E725E /* Sources */,
 				97F2D4B52A94E5A5008E725E /* Network */,
-				97F2D4772A8E5EB7008E725E /* LaunchScreen.storyboard */,
 			);
 			path = RickAndMortyApp;
 			sourceTree = "<group>";
@@ -133,12 +132,12 @@
 		97F2D4A02A94CAEB008E725E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				977EB0792A9508E9001F0BF9 /* Utilities */,
 				97F2D4B22A94E51D008E725E /* App */,
 				97F2D4B42A94E566008E725E /* Views */,
 				97F2D4A22A94CB14008E725E /* ViewModels */,
 				97F2D4982A937486008E725E /* Models */,
 				97F2D49F2A94C6A3008E725E /* Extensions */,
+				977EB0792A9508E9001F0BF9 /* Utilities */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -146,6 +145,7 @@
 		97F2D4A12A94CAF9008E725E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				97F2D4772A8E5EB7008E725E /* LaunchScreen.storyboard */,
 				97F2D4B32A94E541008E725E /* Configuration */,
 			);
 			path = Resources;

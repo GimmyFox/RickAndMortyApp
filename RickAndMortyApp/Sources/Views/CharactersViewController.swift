@@ -37,6 +37,11 @@ class CharactersViewController: UIViewController {
         setupHierarchy()
         setupDelegates()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        vm.getChar()
+    }
 
     func setupDelegates() {
         collectionView.delegate = self
@@ -121,23 +126,22 @@ extension CharactersViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        
         return CustomPaddings.padding16.rawValue
     }
 }
-extension CharactersViewController: CharactersViewModelDelegate {
-    func completeFetching() {
-        collectionView.reloadData()
-    }
-    func handleActivityIndicator(isLoading: Bool) {
-        if isLoading {
-            activityIndicator.startAnimating()
-        } else {
-            activityIndicator.stopAnimating()
-            activityIndicator.removeFromSuperview()
-        }
-    }
-}
+//extension CharactersViewController: CharactersViewModelDelegate {
+//    func completeFetching() {
+//        collectionView.reloadData()
+//    }
+//    func handleActivityIndicator(isLoading: Bool) {
+//        if isLoading {
+//            activityIndicator.startAnimating()
+//        } else {
+//            activityIndicator.stopAnimating()
+//            activityIndicator.removeFromSuperview()
+//        }
+//    }
+//}
 
 
 
