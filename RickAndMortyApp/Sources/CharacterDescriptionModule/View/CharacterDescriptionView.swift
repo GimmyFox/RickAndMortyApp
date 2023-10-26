@@ -10,8 +10,8 @@ import SwiftUI
 struct CharacterDescriptionView: View {
     @StateObject var vm: CharacterDescriptionViewModel
     let action: ()->()
-    init(characterInfo: CharacterInfo, action: @escaping ()->()) {
-        self._vm = StateObject(wrappedValue: CharacterDescriptionViewModel(model: characterInfo))
+    init(vm: CharacterDescriptionViewModel, action: @escaping ()->()) {
+        self._vm = StateObject(wrappedValue: vm)
         self.action = action
     }
     var body: some View {
@@ -181,8 +181,10 @@ struct CharacterDescriptionView: View {
                 .foregroundColor(.white)
                 .font(Font(UIFont.system24normal))
             VStack {
-                ForEach(vm.model.episode, id: \.self) { url in
-                    EpisodeCell(url: url)
+                if let episodes = vm.episodes {
+                    ForEach(episodes, id: \.id) { ep in
+                        EpisodeCell(model: ep)
+                    }
                 }
             }
         }

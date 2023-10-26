@@ -8,19 +8,19 @@
 import Foundation
 
 
-struct ResultModel: Codable {
+struct ResultModel: Decodable {
     let info: Info
     let results: [CharacterInfo]
 }
 
-struct Info: Codable {
+struct Info: Decodable {
     let count, pages: Int
     let next: String?
     let prev: String?
 }
 
 // MARK: - Result
-struct CharacterInfo: Codable {
+struct CharacterInfo: Decodable {
     let id: Int
     let name: String
     let status: Status
@@ -34,24 +34,24 @@ struct CharacterInfo: Codable {
     let created: String
 }
 
-enum Gender: String, Codable {
+enum Gender: String, Decodable {
     case female = "Female"
     case male = "Male"
     case unknown = "unknown"
 }
 
 // MARK: - Location
-struct Location: Codable {
+struct Location: Decodable {
     let name: String
     let url: String
 }
 
-enum Species: String, Codable {
+enum Species: String, Decodable {
     case alien = "Alien"
     case human = "Human"
 }
 
-enum Status: String, Codable {
+enum Status: String, Decodable {
     case alive = "Alive"
     case dead = "Dead"
     case unknown = "unknown"

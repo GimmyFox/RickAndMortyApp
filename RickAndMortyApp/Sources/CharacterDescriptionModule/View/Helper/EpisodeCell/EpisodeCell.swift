@@ -10,22 +10,12 @@ import SwiftUI
 struct EpisodeCell: View {
     @ObservedObject var vm: EpisodeCellViewModel
     
-    init(url: String) {
-        self._vm = ObservedObject(wrappedValue: EpisodeCellViewModel(url: url))
+    init(model: EpisodeModel) {
+        self._vm = ObservedObject(wrappedValue: EpisodeCellViewModel(model: model))
     }
     var body: some View {
-            Group {
-                if let model = vm.model {
-                    createCell(title: model.name, episode: model.episode, airDate: model.airDate)
-                    
-                } else {
-                    createCell(title: "", episode: "", airDate: "")
-                        .hidden()
-                        .overlay {
-                            ProgressView()
-                        }
-                }
-            }
+            
+        createCell(title: vm.model.name, episode: vm.model.episode, airDate: vm.model.airDate)
             .padding()
             .background(Color(UIColor.cardBackground!))
             .cornerRadius(CustomCornerRadius.corner16.rawValue)

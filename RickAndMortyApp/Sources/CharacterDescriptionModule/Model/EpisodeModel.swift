@@ -9,7 +9,7 @@ import Foundation
 
 
 
-struct EpisodeModel: Codable {
+struct EpisodeModel: Decodable {
     let id: Int
     let name, airDate, episode: String
     let characters: [String]
