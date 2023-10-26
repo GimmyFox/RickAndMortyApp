@@ -40,3 +40,13 @@ struct EpisodeCell: View {
     }
 }
 
+
+class EpisodeCellViewModel: ObservableObject {
+    @Published var model: EpisodeModel
+    
+    
+    init(model: EpisodeModel) {
+        self.model = model
+    }
+    
+}
